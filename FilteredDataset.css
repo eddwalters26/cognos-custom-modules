@@ -1,0 +1,354 @@
+.font-container {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10pt;
+}
+
+@media (min-height: 1000px) {
+	.font-container {
+		font-size: 20pt;
+	}
+}
+
+@media (min-height: 1200px) {
+	.font-container {
+		font-size: 20pt;
+	}
+}
+
+table.container {
+	text-align: left;
+}
+
+table.container td {
+	padding: 10px;
+}
+
+table.container tr {
+	vertical-align: top;
+}
+
+td.filterLabel{
+	font-size: 1em;
+	color: #333;
+	vertical-align: middle;
+}
+
+button.filterButton {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eeeeee;
+  color: #999;
+  cursor: pointer;
+  padding: 12px;
+  border: solid #C0C0C0 1px;
+  outline: solid #C0C0C0 1px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.tabContainer {
+	width: 100%;
+	border-bottom: solid #C0C0C0 1px;
+}
+
+button.tabButton {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+	color: #333;
+	cursor: pointer;
+	padding: 12px;
+	border: none;
+	border-top: solid #C0C0C0 5px;
+	text-align: center;
+	font-size: 1.5em;
+	background: #eee;
+}
+
+button.tabButtonActive {
+	border-top: solid #3bb3ff 5px;
+	background: #fff;
+	font-type: bold;
+}
+
+td button.filterButton:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+  outline-right: none;
+}
+
+button.clearFilterButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 5px;
+	height: 65px;
+	width: 65px;  
+}
+
+button.active {
+  background-color: #3bb3ff;
+  border: solid #fff 1px;
+  color: #fff;
+}
+
+table.pivotTable {
+  border: 1px solid #C0C0C0;
+  text-align: right;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+table.pivotTable td, table.pivotTable th {
+  border: 1px solid #C0C0C0;
+  padding: 10px 20px;
+}
+
+table.pivotTable th:first-child {
+	background: #fff;
+	border-top-color: transparent;
+	border-left-color: transparent;
+}
+
+table.pivotTable tbody td {
+  font-size: 1.5em;
+}
+table.pivotTable tr:nth-child(even) {
+  background: #f6f6f6;
+}
+
+table.pivotTable tbody tr td.totalCell {
+  font-weight: bold;
+}
+
+table.pivotTable thead {
+  background: #3bb3ff;
+}
+table.pivotTable thead th {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+table.pivotTable tfoot {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background: #3bb3ff;
+}
+
+table.groupDataTable {
+	text-align: center;
+}
+
+table.groupDataTable th {
+	font-size: 1.8em;
+	border-bottom: 2px solid #3bb3ff;
+	text-align: left;
+	color: #666;
+}
+
+table.groupDataTable tr{
+	vertical-align: top;
+}
+
+table.groupDataTable td{
+	padding: 15px 15px;
+}
+
+table.groupTable {
+  border: 1px solid #C0C0C0;
+  text-align: right;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+
+table.groupTable td, table.groupTable th {
+  border: 1px solid #C0C0C0;
+  padding: 8px;
+  min-width: 85px;
+}
+
+table.groupTable tbody td {
+  font-size: 1.6em;
+}
+table.groupTable tr:nth-child(even) {
+  background: #f6f6f6;
+}
+
+table.groupTable tbody tr td.totalCell {
+  font-weight: bold;
+}
+
+table.groupTable thead {
+  background: #3bb3ff;
+}
+table.groupTable thead th {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+table.groupTable tfoot {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background: #3bb3ff;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+/* The Close Button */
+button.exportCsv {
+  float: right;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  height: 65px;
+  width: 65px;
+}
+
+.modal-header {
+  padding: 2px;
+  background-color: #3bb3ff;
+  color: white;
+}
+
+.modal-header h1 {
+  font-size: 1.4em;
+}
+
+.modal-body {
+	padding: 5px;
+	max-height: 600px;
+	min-height: 400px;
+	overflow: auto;
+}
+
+@media (min-height: 1000px) {
+	.modal-body {
+		max-height: 800px;
+		min-height: 600px;
+	}
+}
+
+@media (min-height: 1200px) {
+	.modal-body {
+		max-height: 1000px;
+		min-height: 800px;
+	}
+}
+
+@media (min-height: 1400px) {
+	.modal-body {
+		max-height: 1200px;
+		min-height: 1000px;
+	}
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -500px}
+  to {bottom: 0 }
+}
+
+@keyframes slideIn {
+  from {bottom: -500px}
+  to {bottom: 0}
+
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+ul.filterList {
+  list-style-type: none;
+  margin: 5px 0px 5px 0px;
+  padding: 0;
+}
+
+ul.filterList li:first-child {
+	font-weight: bold;
+}
+
+ul.filterList li:first-child:after {
+	content: ': ';
+}
+
+ul.filterList li:not(:first-child):not(:last-child):after {
+	content: ', ';
+}
+
+ul.filterList li {
+  float: left;
+  display: block;
+  margin-left: 5px;
+}
+
+ul.filterList:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table.patientList {
+  text-align: left;
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+table.patientList td, table.patientList th {
+  border: 1px solid #C0C0C0;
+  padding: 5px;
+  min-width: 50px;
+}
+
+table.patientList tbody td {
+  font-size: 1em;
+}
+table.patientList tr:nth-child(even) {
+  background: #f6f6f6;
+}
+
+table.patientList thead {
+  background: #3bb3ff;
+}
+
+table.patientList thead th {
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
