@@ -1,12 +1,11 @@
 define( function() {
 "use strict";
 
-function CSSImport()
-{
+function CSSImport() {
 };
 
 CSSImport.prototype.draw = function(oControlHost) {
-    let cssFileId = oControlHost.configuration['cssFileId'];
+	let cssFileId = oControlHost.configuration['cssFileId'];
 	let cssFileUrl = oControlHost.configuration['cssFileUrl'];
     
     for(let x=0; x<cssFileId.length; x++) {
