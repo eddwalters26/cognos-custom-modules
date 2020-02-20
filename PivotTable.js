@@ -20,7 +20,6 @@ PivotTable.prototype.draw = function(oControlHost) {
     this.oContainer.appendChild(this.drawPivotTable(this.j_Datastore, this.pivotColumnIndex, this.pivotRowIndex, this.pivotValuesIndex, true));
  };
 
-
 PivotTable.prototype.drawPivotTable = function(oDataStore, iColumnIndex, iRowIndex, iValueIndex, sortValues) {
     let pivotTable = document.createElement('TABLE');
     pivotTable.className = 'pivotTable';
@@ -94,11 +93,10 @@ PivotTable.prototype.drawPivotTable = function(oDataStore, iColumnIndex, iRowInd
     
     pivotTable.appendChild(pivotBody);    
     return pivotTable;
-}
+};
 
 
-PivotTable.prototype.getParameters = function(oControlHost)
-{
+PivotTable.prototype.getParameters = function(oControlHost) {
 };
 
 
@@ -111,36 +109,17 @@ PivotTable.prototype.setData = function(oControlHost, oDataStore) {
    this.j_Datastore = DataStoreUtility.generateDataStore(oDataStore);
 };
 
-/*PivotTable.prototype.foreignFilterCall = function(columnName, columnValue) {
-    let columnIndex = DataStoreUtility.getColumnIndex(this.j_Datastore, columnName);
-    let columnValueIndex = -1;
-    if(columnIndex !== -1){
-        columnValueIndex = DataStoreUtility.getColumnValueIndex(this.j_Datastore, columnIndex, columnValue);
-    }
-    
-    if(columnIndex !== -1 && columnValueIndex !== -1){
-        this.filterTable(this.j_Datastore, columnIndex, columnValueIndex);
-        return 0;
-    }
-    alert('Data Item Not Found - No Filter');
-    return -1;
-}*/
-
 PivotTable.prototype.foreignFilterCall = function(storageName) {
     let filteredDataStore = DataStoreUtility.filterDatasetByAllStorage(this.j_Datastore, storageName);
     this.oContainer.innerHTML = '';
     this.oContainer.appendChild(this.drawPivotTable(filteredDataStore, this.pivotColumnIndex, this.pivotRowIndex, this.pivotValuesIndex, true));
 };
 
-PivotTable.prototype.test = function() {
-    alert('Test function run');
-}
-
 PivotTable.prototype.filterTable = function(oDataStore, columnIndex, columnValueIndex) {
     let filteredDataStore = DataStoreUtility.filterSingleColumnSingleValue(oDataStore, columnIndex, columnValueIndex);
     this.oContainer.innerHTML = '';
     this.oContainer.appendChild(this.drawPivotTable(filteredDataStore, this.pivotColumnIndex, this.pivotRowIndex, this.pivotValuesIndex, true));
-}
+};
 
 return PivotTable;
 });
